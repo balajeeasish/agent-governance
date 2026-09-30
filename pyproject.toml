@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-governance"
+version = "0.1.0"
+description = "Policy checks, audit logging, and human review gates for AI agents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Balajee Asish Brahmandam" }]
+keywords = ["ai", "agents", "governance", "policy", "audit"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+]
+
+[project.urls]
+Homepage = "https://github.com/balajeeasish/agent-governance"
+
+[tool.setuptools.packages.find]
+where = ["src"]

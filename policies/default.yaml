@@ -1,0 +1,13 @@
+rules:
+  - name: no-shell-destruct
+    action: deny
+    when: {tool: "shell", args_match: "rm -rf|mkfs|: \\(\\)"}
+  - name: approve-all-writes
+    action: require_approval
+    when: {tool: "write_file"}
+  - name: block-exfiltration
+    action: deny
+    when: {tool: "http_request", args_match: "evil\\.com|pastebin"}
+  - name: allow-reads
+    action: allow
+    when: {tool: "read_file"}
